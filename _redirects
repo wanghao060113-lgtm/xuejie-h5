@@ -1,0 +1,3 @@
+# Netlify 重定向规则（如果使用Netlify部署）
+/*    /index.html   200
+
