@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片显示测试</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+        
+        .test-container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            border: 2px dashed #2196F3;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>卡片显示测试</h2>
+    
+    <div class="test-container" id="testContainer1">
+        <h3>测试1: 直接使用.card类</h3>
+    </div>
+    
+    <div class="test-container" id="testContainer2">
+        <h3>测试2: 使用.card.show类</h3>
+    </div>
+    
+    <script>
+        // 测试1：直接创建卡片
+        const container1 = document.getElementById('testContainer1');
+        const card1 = document.createElement('div');
+        card1.className = 'card';
+        card1.textContent = '测试卡片1 - 只有.card类';
+        card1.style.left = '50%';
+        card1.style.top = '30%';
+        container1.appendChild(card1);
+        
+        // 测试2：创建并添加show类
+        const container2 = document.getElementById('testContainer2');
+        const card2 = document.createElement('div');
+        card2.className = 'card';
+        card2.textContent = '测试卡片2 - .card.show类';
+        card2.style.left = '50%';
+        card2.style.top = '30%';
+        container2.appendChild(card2);
+        
+        setTimeout(() => {
+            card2.classList.add('show');
+            console.log('card2添加show类');
+        }, 1000);
+        
+        // 检查样式
+        setTimeout(() => {
+            const style1 = window.getComputedStyle(card1);
+            const style2 = window.getComputedStyle(card2);
+            
+            console.log('卡片1样式:', {
+                opacity: style1.opacity,
+                display: style1.display,
+                visibility: style1.visibility
+            });
+            
+            console.log('卡片2样式:', {
+                opacity: style2.opacity,
+                display: style2.display,
+                visibility: style2.visibility
+            });
+        }, 1500);
+    </script>
+</body>
+</html>
+
+

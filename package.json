@@ -1,0 +1,18 @@
+{
+  "name": "daxue-blessing-h5",
+  "version": "1.0.0",
+  "description": "大雪节气祝福H5页面",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -c-1",
+    "dev": "npx http-server -p 8080 -c-1",
+    "build": "echo 'Static site, no build needed'"
+  },
+  "keywords": [
+    "h5",
+    "blessing",
+    "snow"
+  ],
+  "author": "",
+  "license": "MIT"
+}

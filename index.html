@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="春日暖心祝福H5 - 花开有信，万物向新">
+    <title>春日祝福·暖心寄语</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    <!-- 轻量兜底样式（主要样式在 style.css） -->
+    <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 第一页：欢迎页 -->
+    <div id="page1" class="page">
+        <div class="title-container">
+            <h1 class="main-title">春日🌸</h1>
+            <p class="subtitle">风有约，花不误<br>愿这份祝福陪你奔赴整个春天</p>
+        </div>
+        <button id="enterBtn" class="enter-btn">轻触花瓣，开启祝福</button>
+    </div>
+
+    <!-- 第二页：祝福页 -->
+    <div id="page2" class="page">
+        <div id="musicControl" class="music-control hidden">
+            <div class="music-disc">
+                <div class="music-disc-inner"></div>
+                <div class="music-arm"></div>
+            </div>
+            <div class="music-text">
+                <div class="music-title">我的秘密 + 茫</div>
+                <div class="music-status" id="musicStatus">已暂停</div>
+            </div>
+        </div>
+        <div class="blessings-container" id="blessingsContainer"></div>
+        <div class="particles"></div>
+    </div>
+
+    <script src="audio-manager.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
